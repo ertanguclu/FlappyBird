@@ -10,7 +10,7 @@ namespace FlappyBird
             InitializeComponent();
         }
 
-        private void gameTimerEvent(object sender, EventArgs e)
+        private void GameTimerEvent(object sender, EventArgs e)
         {
             pbxBird.Top += gravity;
             pbxTop.Left -= pipeSpeed;
@@ -31,7 +31,7 @@ namespace FlappyBird
                 pbxBird.Bounds.IntersectsWith(pbxTop.Bounds) ||
                 pbxBird.Bounds.IntersectsWith(pbxGround.Bounds) || pbxBird.Top < -25)
             {
-                endGame();
+                EndGame();
             }
             if (score > 5)
             {
@@ -39,7 +39,7 @@ namespace FlappyBird
             }
         }
 
-        private void birdDown(object sender, KeyEventArgs e)
+        private void BirdDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Space)
             {
@@ -47,14 +47,14 @@ namespace FlappyBird
             }
         }
 
-        private void birdUp(object sender, KeyEventArgs e)
+        private void BirdUp(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Space)
             {
                 gravity = 15;
             }
         }
-        private void endGame()
+        private void EndGame()
         {
             gameTimer.Stop();
             lblScore.Text = " Game over!";
