@@ -97,7 +97,7 @@
             // 
             gameTimer.Enabled = true;
             gameTimer.Interval = 20;
-            gameTimer.Tick += gameTimerEvent;
+            gameTimer.Tick += GameTimerEvent;
             // 
             // Form1
             // 
